@@ -1,0 +1,50 @@
+name: Development CD Pipeline
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js (if your project uses Node.js)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the project to create artifacts
+      - name: Build project
+        run: npm run build
+
+      # Step 5: Deploy the build artifacts to the Development Environment
+      - name: Deploy to Development Environment
+        run: |
+          echo "Deploying build artifacts to the Development Environment..."
+
+          # Configure Git
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+          # Create or switch to the development branch
+          git checkout -b develop
+
+          # Forcefully add the build artifacts to the development branch
+          git add -f build/
+
+          # Commit the changes
+          git commit -m "Deploy build artifacts to development environment"
+
+          # Force push the changes to the development branch
+          git push origin develop --force
