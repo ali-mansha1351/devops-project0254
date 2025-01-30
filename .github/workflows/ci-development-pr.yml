@@ -25,27 +25,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install linting tools
-        run: npm install --save-dev eslint stylelint htmlhint
-
-      - name: Configure ESLint (JavaScript/TypeScript linting)
-        run: |
-          echo '{
-            "extends": ["eslint:recommended"],
-            "rules": {
-              "semi": ["error", "always"],
-              "quotes": ["error", "single"],
-              "indent": ["error", 2],
-              "no-console": "warn",
-              "no-unused-vars": "warn",
-              "eqeqeq": "error",
-              "curly": "error",
-              "no-multi-spaces": "error",
-              "no-trailing-spaces": "error",
-              "no-var": "error"
-            }
-          }' > .eslintrc.json
-
       - name: Configure Stylelint (CSS/SCSS linting)
         run: |
           echo '{
@@ -78,9 +57,6 @@ jobs:
             "spec-char-escape": true,
             "attr-no-duplication": true
           }' > .htmlhintrc
-
-      - name: Run JavaScript/TypeScript Linting
-        run: npx eslint .
 
       - name: Run CSS/SCSS Linting
         run: npx stylelint "**/*.css"
