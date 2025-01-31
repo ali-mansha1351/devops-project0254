@@ -1,0 +1,71 @@
+name: CI Pipeline for Staging (PR)
+
+on:
+  pull_request:
+    branches:
+      - release
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  lint-and-build:
+    runs-on: ubuntu-latest
+    environment: staging
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install linting tools
+        run: npm install --save-dev stylelint htmlhint
+
+      - name: Configure Stylelint (CSS/SCSS linting)
+        run: |
+          echo '{
+            "extends": ["stylelint-config-standard"],
+            "rules": {
+              "color-no-invalid-hex": true,
+              "font-family-no-duplicate-names": true,
+              "unit-no-unknown": true,
+              "block-no-empty": true,
+              "declaration-block-no-duplicate-properties": true,
+              "no-duplicate-selectors": true,
+              "no-extra-semicolons": true,
+              "selector-pseudo-class-no-unknown": true,
+              "selector-type-no-unknown": true,
+              "property-no-unknown": true
+            }
+          }' > .stylelintrc.json
+
+      - name: Configure HTMLHint (HTML linting)
+        run: |
+          echo '{
+            "tagname-lowercase": true,
+            "attr-lowercase": true,
+            "attr-value-double-quotes": true,
+            "doctype-first": true,
+            "id-unique": true,
+            "src-not-empty": true,
+            "alt-require": true,
+            "space-tab-mixed-disabled": "space",
+            "spec-char-escape": true,
+            "attr-no-duplication": true
+          }' > .htmlhintrc
+
+      - name: Run CSS/SCSS Linting
+        run: npx stylelint "**/*.css"
+
+      - name: Run HTML Linting
+        run: npx htmlhint "**/*.html"
+
+      - name: Build the project
+        run: npm run build
