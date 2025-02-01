@@ -41,7 +41,7 @@ jobs:
           git checkout develop
 
           # Forcefully add the build artifacts to the development branch
-          git add -f build/
+          git add -f .
 
           # Commit the changes
           git commit -m "Deploy build artifacts to development environment"
