@@ -28,7 +28,7 @@ jobs:
       - name: Configure Stylelint (CSS/SCSS linting)
         run: |
           echo '{
-            "extends": ["stylelint-config-standard"],
+            "extends": "stylelint-config-standard",
             "rules": {
               "color-no-invalid-hex": true,
               "font-family-no-duplicate-names": true,
