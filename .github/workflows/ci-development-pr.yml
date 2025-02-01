@@ -23,7 +23,7 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        run: npm install stylelint htmlhint stylelint-config-standard
+        run: npm install --save-dev stylelint htmlhint stylelint-config-standard
 
       - name: Configure Stylelint (CSS/SCSS linting)
         run: |
