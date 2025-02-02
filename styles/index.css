@@ -100,17 +100,52 @@ p {
 }
 
 .project-link:hover {
-  background-color: #0056b3;
+background-color: #0056b3;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+#services {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
 }
 
-body {
-  font-family: Arial, sans-serif;
+.services-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-item {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px;
+}
+
+.service-title {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
 .hero {
