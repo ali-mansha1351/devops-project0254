@@ -103,16 +103,6 @@ p {
   background-color: #0056b3;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
 .hero {
   background-image: url('https://via.placeholder.com/1920x600');
   background-size: cover;
