@@ -36,7 +36,6 @@ jobs:
               "block-no-empty": true,
               "declaration-block-no-duplicate-properties": true,
               "no-duplicate-selectors": true,
-              "no-extra-semicolons": true,
               "selector-pseudo-class-no-unknown": true,
               "selector-type-no-unknown": true,
               "property-no-unknown": true
