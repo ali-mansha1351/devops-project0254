@@ -23,12 +23,12 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --save-dev stylelint htmlhint stylelint-config-standard
 
       - name: Configure Stylelint (CSS/SCSS linting)
         run: |
           echo '{
-            "extends": ["stylelint-config-standard"],
+            "extends": "stylelint-config-standard",
             "rules": {
               "color-no-invalid-hex": true,
               "font-family-no-duplicate-names": true,
