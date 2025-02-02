@@ -148,3 +148,54 @@ p {
   color: #555;
   line-height: 1.6;
 }
+
+.hero {
+  background-image: url("https://via.placeholder.com/1920x600");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.cta-button {
+  background-color: #ff5722;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #e64a19;
+}
+
+.introduction {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.introduction h2 {
+  font-size: 36px;
+}
+
+.introduction p {
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
