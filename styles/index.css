@@ -98,6 +98,7 @@ p {
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
+
 .project-link:hover {
 background-color: #0056b3;
 }
@@ -125,15 +126,16 @@ background-color: #0056b3;
 .service-item {
   background: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px;
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px;
 }
+
 .service-title {
   font-size: 1.8rem;
   color: #222;
