@@ -164,13 +164,11 @@ footer {
   background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-member:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .team-member h3 {
@@ -183,7 +181,7 @@ footer {
   font-size: 16px;
   color: #555;
 }
-/* Contact Us Section Styling */
+
 #contact {
   background-color: #f9f9f9;
   padding: 40px;
@@ -241,3 +239,4 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
