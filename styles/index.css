@@ -103,6 +103,7 @@ p {
   background-color: #0056b3;
 }
 
+/* Services Section */
 #services {
   padding: 4rem 2rem;
   background-color: #fff;
@@ -126,7 +127,6 @@ p {
 .service-item {
   background: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 4px 6px;
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
