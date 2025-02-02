@@ -100,7 +100,7 @@ p {
 }
 
 .project-link:hover {
-background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 #services {
@@ -149,7 +149,7 @@ background-color: #0056b3;
 }
 
 .hero {
-  background-image: url('https://via.placeholder.com/1920x600');
+  background-image: url("https://via.placeholder.com/1920x600");
   background-size: cover;
   background-position: center;
   height: 600px;
