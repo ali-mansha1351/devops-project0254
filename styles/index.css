@@ -127,7 +127,6 @@ p {
 .service-item {
   background: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 10%);
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
